@@ -12,8 +12,8 @@ third_party_licenses.json and third_party_licenses.txt files in the distributed
 
 The plugin will generate two text files based on the gathered licenses info:
 
-  * third_party_licenses
-  * third_party_licenses_metadata
+- third_party_licenses
+- third_party_licenses_metadata
 
 and registers them as raw resources so that it can be consumed by the
 play-services-oss-licenses library.
@@ -73,3 +73,9 @@ display additional license information for that library.
 You can also set the title of the displayed activity:
 
     OssLicensesMenuActivity.setActivityTitle(getString(R.string.custom_license_title));
+
+## Manually add licenses
+
+Create a `third_party_licenses` directory in the root directory of your project. Then add any license as a text file.
+The name of the file is used in the list activity, so best to avoid any file extensions like `.txt`. The contents of
+the file are shown in the license activity itself.
